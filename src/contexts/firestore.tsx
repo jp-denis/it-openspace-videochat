@@ -15,8 +15,6 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_API_KEY,
 };
 
-console.log(firebaseConfig);
-
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
