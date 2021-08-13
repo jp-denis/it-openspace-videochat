@@ -26,7 +26,6 @@ export const HomePage = () => {
     updateCallId(callDoc.id);
 
     peerConnection.onicecandidate = (event) => {
-      console.log("candidate", event.candidate);
       event.candidate && offerCandidates.add(event.candidate.toJSON());
     };
 
@@ -67,7 +66,6 @@ export const HomePage = () => {
     const answerCandidates = callDoc.collection("answerCandidates");
 
     peerConnection.onicecandidate = (event) => {
-      console.log("candidate", event.candidate);
       event.candidate && answerCandidates.add(event.candidate.toJSON());
     };
 
